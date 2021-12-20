@@ -2,8 +2,8 @@ package com.desarrollos.entde;
 
 public class Garage{
     
-    public void printGarage() 
+    static public void printGarage() // añadimos static
     {
-        system.out.print("|*]");
+        System.out.print("|*]"); 
     }
 }

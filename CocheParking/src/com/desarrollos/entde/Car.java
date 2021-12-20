@@ -26,14 +26,14 @@ public class Car
      * Method that is being always invoked when the program is running
      * @throws InterruptedException 
      */
-    public static void main(String[] args) throws InterruptedException{
+    public  static void main(String[] args) throws InterruptedException{
     	Garage g = new Garage();
     	Car car = new Car(g);
         car.accelerate();
         slowDown();
         moveDown();
         accelerate();
-        car.printGarage();
+        Garage.printGarage();
 //        turnRight();
 //        turnHeadlightsOn();
 //        turnHeadlightsOff();
@@ -43,7 +43,7 @@ public class Car
      * Accelerate the car
      * @throws InterruptedException 
      */
-    public void accelerate() throws InterruptedException{
+    static public void accelerate() throws InterruptedException{ // añadimos static
         String c = new String("*");
         String space = new String(" ");
     	for(int i=0; i<5; i++)
@@ -58,8 +58,8 @@ public class Car
      * Slow down the car
      * @throws InterruptedException 
      */
-    public void slowDown() throws InterruptedException{
-    	string c = new string("     *");
+    static public void slowDown() throws InterruptedException{ // añadimos static
+    	String c = new String("     *"); // String va con mayúscula
     	for(int i=0; i<5; i++)
         {
         	System.out.print(c);
@@ -73,9 +73,9 @@ public class Car
      * Move the car downwards
      * @throws InterruptedException 
      */    
-    public void moveDown() throws InterruptedException{
-    	string c = new string("\t\t\t\t  *"));
-    	for(int i=0, i<5, i++)
+    static public void moveDown() throws InterruptedException{ // añadimos static
+    	String c = new String("\t\t\t\t  *"); // String con mayúscula, sobra 1 pparéntesis
+    	for(int i=0; i<5; i++) // se escribe ; no ,
         {
     		if(i!=4)
     			System.out.println(c);
